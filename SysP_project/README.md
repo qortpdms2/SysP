@@ -173,3 +173,21 @@ path_env에는 환경변수 PATH의 값을 저장함.
 strtok()함수로 path_env를 : 기준으로 분리하고 분리된 경로를 path에 저장함.
 path가 null이 아닐 동안 snprintf()로 출력하고 싶은 모양을 지정해서 command_path에 저장한다. 출력하기 전에 access()함수로 파일이 실행되는 지 확인하고 F_OK 플래그로 실행 가능 여부를 체크한 다음 출렧한다. access() 함수는 파일에 대한 접근 권한을 사용하는 함수로 F_OK 플래그로 파일의 존재 여부를 확인할 수 있다. 
 
+**[hostname 명령어]**18
+
+![image](https://github.com/qortpdms2/SysP/assets/128915671/4dc96c34-a749-4375-ae5d-598883e5f67c)
+
+1. 현재 시스템의 호스트 이름을  출력하는 명령어
+
+<코드설명>
+unistd.h에 들어있는 gethostname()으로 현재 호스트 네임을 쉽게 출력할 수 있다.
+
+
+[nl 명령어]
+
+![image](https://github.com/qortpdms2/SysP/assets/128915671/48124718-82b1-4e5e-813a-0bea710df5bf)
+
+1. 텍스트 파일의 내용에 줄 번호를 추가하여 출력하는 명령어
+2. w,s,v,i 옵션 4개 구현
+
+
