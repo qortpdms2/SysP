@@ -143,6 +143,33 @@ entry에 있는 파일 이름을 출력한다.
 <코드설명>
 rename()는 첫 번째 인수는 이동할 파일의 이름을 받고, 두 번째 인수는 이동 대상 파일의 이름을 받는다
 
+**[whoami 명령어]**15
 
+![image](https://github.com/qortpdms2/SysP/assets/128915671/4286d730-463e-4976-a614-63fd71dadd6d)
+1. 현재 실행 중인 사용자의 이름을 출력하는 명령어
 
+<코드설명>
+uid에는 getuid() 함수로 현재 실행 중인 프로세스의 사용자 ID를 가져온다. uid의 타입은 uid_t 타입으로 <sys/types.h>에 있습니다.
+
+pw은 getpwuid() 함수로 사용자 ID에 해당하는 사용자 정보를 얻어옴. 반환 값은 pw 포인터 에 저장함.
+pw 구조체의 pw_name을 출력한다.
+
+**[rm 명령어]**16
+
+![image](https://github.com/qortpdms2/SysP/assets/128915671/322f013b-f2a3-4b67-94f3-69efb42a2e2d)
+1. 파일을 삭제하는 명령어
+
+<코드 설명>
+인자로 받은 파일을 remove()함수로 삭제한다.
+
+**[which 명령어]**17
+
+![image](https://github.com/qortpdms2/SysP/assets/128915671/7b5ed6bf-d028-4ce9-afae-1f7bbce07d7f)
+1. 주어진 명령어가 시스템에서 어떤 경로에 위치하는지 확인하는 명령어
+
+<코드설명>
+command에는 확인할 명령어를 저장한다.
+path_env에는 환경변수 PATH의 값을 저장함.
+strtok()함수로 path_env를 : 기준으로 분리하고 분리된 경로를 path에 저장함.
+path가 null이 아닐 동안 snprintf()로 출력하고 싶은 모양을 지정해서 command_path에 저장한다. 출력하기 전에 access()함수로 파일이 실행되는 지 확인하고 F_OK 플래그로 실행 가능 여부를 체크한 다음 출렧한다. access() 함수는 파일에 대한 접근 권한을 사용하는 함수로 F_OK 플래그로 파일의 존재 여부를 확인할 수 있다. 
 
