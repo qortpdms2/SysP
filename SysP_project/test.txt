@@ -1,4 +1,10 @@
-insert 
-delete
-은세백
+hello
+world
+hello
+everyone
+halo
+
+myname
+is
+name
 
